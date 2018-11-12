@@ -1,19 +1,9 @@
-parallel 'test':
-{
-    node {
-    stage "Sample pgm"
-    echo 'Hello World'
+   node {
+    stage "Sample Program 1"
+    echo 'This is stage 1'
     writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
-    stage "Sample pgm"
-    echo 'Hello World'
+    stage "Sample Program 2"
+    echo 'This is stage 2'
 }
-},'ftest':{
 
- node {
-    stage "Sample pgm1"
-    echo 'Hello World'
-    writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
-    stage "Sample pgm1"
-    echo 'Hello World'
-}
-}
+ 
